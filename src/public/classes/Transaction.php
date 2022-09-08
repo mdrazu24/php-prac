@@ -1,34 +1,37 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Php\PracOne;
+namespace Php\Duplicate;
 
+use DateTime;
 
-class Transaction 
+class Transaction
 {
     private float $amount = 10.0;
 
     function __construct($amount)
     {
-    
+
         $this->amount = $amount;
-        echo "this is from the main class\n";
+        echo "This is from the duplicate class\n";
     }
 
-    public function addTax (float $rate) : Transaction {
+    public function addTax(float $rate): Transaction
+    {
         $this->amount += $rate / 100;
         return $this;
+    }
 
-    } 
-
-    public function applyDiscount (float $rate) : Transaction {
+    public function applyDiscount(float $rate): Transaction
+    {
         $this->amount -= $this->amount * $rate / 100;
         return $this;
     }
 
 
-    public function getAmount () {
+    public function getAmount()
+    {
         return $this->amount;
     }
-    
 }
