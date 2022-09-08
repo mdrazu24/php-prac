@@ -2,7 +2,7 @@
 declare(strict_types=1);
 class Transaction 
 {
-    public float $amount = 10.0;
+    private float $amount = 10.0;
 
     function __construct($amount)
     {
@@ -11,7 +11,20 @@ class Transaction
         
     }
 
-    
-    
+    public function addTax (float $rate) : Transaction {
+        $this->amount += $rate / 100;
+        return $this;
+
+    } 
+
+    public function applyDiscount (float $rate) : Transaction {
+        $this->amount -= $this->amount * $rate / 100;
+        return $this;
+    }
+
+
+    public function getAmount () {
+        return $this->amount;
+    }
     
 }
