@@ -5,11 +5,14 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+      # this context dockerfile will be used to create the docker container.
     container_name: php1
     restart: always
     working_dir: /var/www/
+    # this is the project working directory
     volumes:
       - ../src:/var/www
+      # this is the reference volume of current project. Simply it copies all the files from current src and paste theem to the var/www folder including the changes. 
   nginx:
     image: nginx:1.19-alpine
     container_name: php1-nginx
@@ -19,5 +22,6 @@ services:
     volumes:
       - ../src:/var/www
       - ./nginx:/etc/nginx/conf.d
+      # this copies all the files from from src and nginx folder and copy to respective folder/
 
 

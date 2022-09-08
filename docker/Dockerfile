@@ -6,3 +6,6 @@ RUN apt-get update && apt-get install -y \
     unzip
     
 WORKDIR /var/www
+# this means www folder will be  the project directory. If www doesn't exist it will create it.
+# I'm not copying everything through this script. Follow composer for more details.
+#
