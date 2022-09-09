@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\TransactionAbstract;
+use App\TransactionInterface;
+
 class Transaction {
     private float $amount = 10.0;
 
@@ -26,6 +29,11 @@ class Transaction {
 
 
     public function getAmount () {
+        return $this->amount;
+    }
+
+    public function getCurrency()
+    {
         return $this->amount;
     }
     

@@ -9,6 +9,7 @@
 // new Transaction(20);
 
 use App\DB;
+use App\Transaction;
 
 require_once '../vendor/autoload.php';
 
@@ -21,6 +22,19 @@ $db1 = DB::getInstance([]);
 
 echo $id->uuid4();
 
+echo "</br>";
+
+$id = new Transaction(20);
+
+echo $id->addTax(20)->getAmount();
+echo "</br>";
+
+$arr = [
+    "some" => "something",
+    "ANother" => "another"
+];
+echo count($arr);
+echo "</br>";
 
 echo "somethign";
 echo "I have no idea"
