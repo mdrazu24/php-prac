@@ -6,7 +6,7 @@ namespace App;
 use App\TransactionAbstract;
 use App\TransactionInterface;
 
-class Transaction {
+class Transaction extends TransactionAbstract {
     private float $amount = 10.0;
 
     function __construct($amount)
@@ -15,6 +15,12 @@ class Transaction {
         $this->amount = $amount;
         echo "this is from the main class\n";
     }
+
+    public function addSome(int $other) : float
+    {
+        
+        return $this->amount * $other;
+    } 
 
     public function addTax (float $rate) : Transaction {
         $this->amount += $rate / 100;
@@ -36,5 +42,7 @@ class Transaction {
     {
         return $this->amount;
     }
+
+
     
 }
