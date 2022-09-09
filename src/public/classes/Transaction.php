@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Php\Duplicate;
 
-use DateTime;
-
 class Transaction
 {
-    private float $amount = 10.0;
 
     function __construct($amount)
     {
 
         $this->amount = $amount;
+    
         echo "This is from the duplicate class\n";
+        echo "</br>";
+
     }
 
     public function addTax(float $rate): Transaction
