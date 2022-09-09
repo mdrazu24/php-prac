@@ -1,5 +1,6 @@
 <?php 
 
+namespace App;
 
 class DB {
     public static ?DB $instance = null;
