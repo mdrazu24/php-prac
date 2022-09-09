@@ -1,11 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Php\PracOne;
 
-
-class Transaction 
-{
+class Transaction {
     private float $amount = 10.0;
 
     function __construct($amount)

@@ -1,27 +1,19 @@
 
 <?php
-// include_once './Transaction.php';
-// include_once './classes/Transaction.php';
-
-
-require __DIR__ . '/../vendor/autoload.php';
-
-// use Php\PracOne\Transaction;
-// use Php\Duplicate\Transaction as Something;
-
 // $trans1 = (new Transaction(10.0))->addTax(2)->applyDiscount(10)->getAmount();
-// $trans2 = (new Something(100.0))->addTax(2)->applyDiscount(10)->getAmount();
 
 // var_dump($trans1);
+include_once '../app/Transaction.php';
+include_once '../app/DB.php';
 
-// echo '<br/>';
+new Transaction(20);
 
-// var_dump($trans2);
-// echo '<br/>';
+echo '<br/>';
 
-$id = new Ramsey\Uuid\UuidFactory();
+// $id = new Ramsey\Uuid\UuidFactory();
+$db1 = DB::getInstance([]);
 
-echo $id->uuid4();
+// echo $id->uuid4();
 
 
 echo "somethign";
