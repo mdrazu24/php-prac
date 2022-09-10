@@ -7,3 +7,4 @@ interface TransactionInterface {
     public function getCurrency() : int;
     
 }
+// 
