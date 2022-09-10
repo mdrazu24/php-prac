@@ -37,5 +37,23 @@ echo count($arr);
 echo "</br>";
 
 echo "somethign";
-echo "I have no idea"
+echo "I have no idea";
+echo "</br>";
+
+$arr = [1,2,3,4,45,5];
+
+foreach($arr as $key => $value) {
+    echo $key . ' => ' . $value;
+    echo "<br>";
+}
+echo "</br>";
+
+for($i = 0; $i <= count($arr) - 1; $i++) {
+    echo $arr[$i] . ' => ' . $i;
+    echo "<br>";
+
+}
+echo "<br>";
+
+
 ?>
